@@ -9,14 +9,66 @@
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
+    <script language="javascript" src="logo.js"></script>
+	<style type="text/css">
       body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+			padding-top: 60px;
+			padding-bottom: 40px;
+			}
+	.dis{
+			float:right;
+			display:none;
+			margin-top:-40px
+		
+		}	
+	</style>
+	<script>
+	function goto()
+	{
+		
+		var urlval1=document.URL.search("searce.invoize.org");
+		
+		if(urlval1>0)
+		{
+			window.location.assign("http://searce.invoize.org/prototype");
+		}
+		else
+		{
+			window.location.assign("http://ceva.invoize.org/prototype");
+		}
+	}
+	
+	function checkuser()
+	{
+		
+		var user = document.getElementById("User_Name").value;
+		
+		switch(user)
+		{
+		case 'superadmin':
+		  window.location.assign("usermanagement/superadmindashboard.html");
+		  break;
+		case 'searceadmin':
+		  window.location.assign("usermanagement/admindashboard.html");
+		  break;
+		case 'searcemanager':
+		  window.location.assign("usermanagement/managerdashboard.html");
+		  break;
+		case 'searceam':
+		  window.location.assign("usermanagement/amdashboard.html");
+		  break;
+		case 'searceanalyst':
+		  window.location.assign("usermanagement/analystdashboard.html");
+		  break;
+		case 'searcestation':
+		  window.location.assign("usermanagement/stationdashboard.html");
+		  break;	
+	
+		}
+	}
+	</script>
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/reg.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -30,7 +82,7 @@
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
   </head>
 
-  <body>
+  <body onLoad="javascript:logorun();">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
@@ -43,15 +95,15 @@
           <a class="brand">Invoize Suite</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="landingpage.html">Home</a></li>
+              <li class="active"><a href="javascript:goto();">Home</a></li>
         
-              <li><a href="landingpage.html">Contact</a></li>
+              <li><a href="usermanagement/contact.html">Contact</a></li>
               
             </ul>
             <form class="navbar-form pull-right">
-              <input class="span2" type="text" text="User Name" placeholder="Email">
-              <input class="span2" type="password" text="Password"placeholder="Password">
-              <a href="dashboard.html">Sign in</a>
+              <input class="span2" type="text" text="User Name" id="User_Name" name="User_Name" placeholder="User Name">
+              <input class="span2" type="password" text="Password" id="Password" name="Password" placeholder="Password">
+              <a href="javascript:checkuser();">Sign in</a>
             </form>
           </div><!--/.nav-collapse -->
         </div>
@@ -62,12 +114,25 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
+		<div id='logo1' class='dis'><img src="img\searce.png"  height=200 width=150></div>
+		<div id='logo2' class='dis'><img src="img\ceva.jpg"  height=100 width=100></div>
         <h2>Invoize-Suite</h2>
         <p>Invoize-Suite is a complete web application for generating your invoices and auditing them as well. Sign Up for a free 40 days trial period today..!</p>
-		<a href="newregistration.html">For registration Click here.! </a>
+		<div id="Reg_link" name="Reg_link"><a href="javascript:signup();">For registration Click here.!</a></div>
+		
         
       </div>
-
+	<div id="registration" name="registration" class="Reg">
+	<span style="font-size:20px;">Sign up</span><br><br>
+	<form>
+		<input type="text" id="User_Name" name="User_Name" placeholder="Your Full Name">
+		<input type="text" id="Company_Name" name="Company_Name" placeholder="Company or organization">
+		<input type="text" id="Email" name="Email" placeholder="Email">
+		<input type="password" id="Password" name="Password" placeholder="Password"><br>
+		<input type="submit" id="Submit" name="Submit" value="Sign up">
+		<input type="button" id="Cancel" name="Cancel" value="Cancel" onclick="Cancel_signup();">
+	</form>
+	</div>
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
@@ -108,7 +173,7 @@
     <script src="./Bootstrap, from Twitter_files/bootstrap-collapse.js"></script>
     <script src="./Bootstrap, from Twitter_files/bootstrap-carousel.js"></script>
     <script src="./Bootstrap, from Twitter_files/bootstrap-typeahead.js"></script>
-
+	<script src="logo.js"></script>
   
 
 </body></html>

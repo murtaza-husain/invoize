@@ -1065,7 +1065,7 @@ input[type="color"]:focus,
 
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 4px 0 0;
+  margin: 4px 6px 6px;
   margin-top: 1px \9;
   *margin-top: 0;
   line-height: normal;
@@ -3259,6 +3259,10 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffbb450', endColorstr='#fff89406', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
+
+
+
+
 
 .btn-warning:hover,
 .btn-warning:active,

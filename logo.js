@@ -27,15 +27,15 @@
 			
 			if(urlval>0)
 			{
-				window.location.assign("http://searce.invoize.org/prototype");
+				window.location.assign("http://searce.invoize.org/prototype/index.html");
 			}
 			else if(urlval2>0)
 			{
-				window.location.assign("http://ceva.invoize.org/prototype");
+				window.location.assign("http://ceva.invoize.org/prototype/index.html");
 			}
 			else
 			{
-				window.location.assign("http://abc.invoize.org/prototype");
+				window.location.assign("http://abc.invoize.org/prototype/index.html");
 			}
 		}	
 		function signup()

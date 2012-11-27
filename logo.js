@@ -46,5 +46,12 @@
 		{
 			document.getElementById("registration").style.display="none";
 		}
-		
+		function help_block()
+		{
+			document.getElementById("help").style.display="block";
+		}
+		function help_none()
+		{
+			document.getElementById("help").style.display="none";
+		}
 	

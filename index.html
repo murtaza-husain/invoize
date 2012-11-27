@@ -66,6 +66,17 @@
 	
 		}
 	}
+	
+$("#help_text").mouseover(function () {
+  $("div").first().show("fast", function showNext() {
+    $(this).next("div").show("fast", showNext);
+  });
+});
+
+$("#help_text").mouseout(function () {
+  $("div").hide(1000);
+});
+
 	</script>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/reg.css" rel="stylesheet">
@@ -98,10 +109,11 @@
               <li class="active"><a href="javascript:goto();">Home</a></li>
         
               <li><a href="usermanagement/contact.html">Contact</a></li>
-              
             </ul>
+			
             <form class="navbar-form pull-right">
-              <input class="span2" type="text" text="User Name" id="User_Name" name="User_Name" placeholder="User Name">
+				<div style="display:inline-block;vertical-align: middle;" onmouseover="help_block();" onmouseout="help_none();">Help?</div>
+				<input class="span2" type="text" text="User Name" id="User_Name" name="User_Name" placeholder="User Name">
               <input class="span2" type="password" text="Password" id="Password" name="Password" placeholder="Password">
               <a href="javascript:checkuser();">Sign in</a>
             </form>
@@ -113,7 +125,17 @@
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
+      <div id="help" name="help" style="display:none;position:absolute;margin-left:680px;margin-top:-20px;background-color:#ddd;">
+		<ul style="list-style-type: none;">
+			<li>superadmin</li>
+			<li>searceadmin</li>
+			<li>searcemanager</li>
+			<li>searceam</li>
+			<li>searcestation</li>
+			<li>searceanalyst</li>
+		</ul>
+		</div>			
+	  <div class="hero-unit">
 		<div id='logo1' class='dis'><img src="img\searce.png"  height=200 width=150></div>
 		<div id='logo2' class='dis'><img src="img\ceva.jpg"  height=100 width=100></div>
         <h2>Invoize-Suite</h2>

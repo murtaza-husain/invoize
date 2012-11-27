@@ -56,5 +56,9 @@
 			document.getElementById("help").style.display="none";
 			document.getElementById("help_text").style.color="#999";
 		}
+		function wizard_page()
+		{
+			window.location.assign("http://searce.invoize.org/prototype/wizard/wizard.html");
+		}
 		
 	

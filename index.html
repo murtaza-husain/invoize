@@ -67,15 +67,6 @@
 		}
 	}
 	
-$("#help_text").mouseover(function () {
-  $("div").first().show("fast", function showNext() {
-    $(this).next("div").show("fast", showNext);
-  });
-});
-
-$("#help_text").mouseout(function () {
-  $("div").hide(1000);
-});
 
 	</script>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -125,9 +116,9 @@ $("#help_text").mouseout(function () {
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div id="help" name="help" style="display:none;position:absolute;margin-left:680px;margin-top:-20px;background-color:#ddd;border:1px solid #fff; width:135px;">
+      <div id="help" name="help" style="display:none;position:absolute;margin-left:680px;margin-top:-20px;background-color:#ddd;border:1px solid #fff;">
 		<ul style="list-style-type: none;">
-			<li>superadmin</li>
+			<li>superadmin - This is username is use for super admin.</li>
 			<li>searceadmin</li>
 			<li>searcemanager</li>
 			<li>searceam</li>
@@ -146,7 +137,7 @@ $("#help_text").mouseout(function () {
       </div>
 	<div id="registration" name="registration" class="Reg">
 	<span style="font-size:20px;">Sign up</span><br><br>
-	<form>
+	<form action="wizard/wizard.html">
 		<input type="text" id="User_Name" name="User_Name" placeholder="Your Full Name">
 		<input type="text" id="Company_Name" name="Company_Name" placeholder="Company or organization">
 		<input type="text" id="Email" name="Email" placeholder="Email">

@@ -49,9 +49,12 @@
 		function help_block()
 		{
 			document.getElementById("help").style.display="block";
+			document.getElementById("help_text").style.color="#fff";
 		}
 		function help_none()
 		{
 			document.getElementById("help").style.display="none";
+			document.getElementById("help_text").style.color="#999";
 		}
+		
 	

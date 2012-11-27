@@ -112,7 +112,7 @@ $("#help_text").mouseout(function () {
             </ul>
 			
             <form class="navbar-form pull-right">
-				<div style="display:inline-block;vertical-align: middle;" onmouseover="help_block();" onmouseout="help_none();">Help?</div>
+				<div id="help_text" name="help_text" style="display:inline-block;vertical-align: middle;" onmouseover="help_block();" onmouseout="help_none();">Help?</div>
 				<input class="span2" type="text" text="User Name" id="User_Name" name="User_Name" placeholder="User Name">
               <input class="span2" type="password" text="Password" id="Password" name="Password" placeholder="Password">
               <a href="javascript:checkuser();">Sign in</a>

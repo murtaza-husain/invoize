@@ -343,6 +343,7 @@
 			
 			}
 			
+			
 			if(domain.length==0)
 			{
 				count=count+1;
@@ -356,13 +357,17 @@
 			document.getElementById("process_img").style.display="none";
 			if(count>1)
 			{
-				document.getElementById("available").style.display="block";	
+				document.getElementById("available").style.display="block";
+				document.getElementById("not_available").style.display="none";	
 
 			}
 			else
 			{
 				document.getElementById("not_available").style.display="block";
 			}
+			
+			
+			
 		}
 		function finish_process()
 		{

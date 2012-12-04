@@ -35,7 +35,7 @@
 			}
 			else
 			{
-				window.location.assign("http://www.invoize.org");
+				window.location.assign("www.invoize.org");
 			}
 		}	
 		function signup()

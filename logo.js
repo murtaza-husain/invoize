@@ -21,21 +21,21 @@
 		}
 		function goto()
 		{
-			
+			var url=document.URL;
 			var urlval=document.URL.search("searce.invoize.org");
 			var urlval2=document.URL.search("ceva.invoize.org");
 			
 			if(urlval>0)
 			{
-				window.location.assign("http://searce.invoize.org/prototype/index.html");
+				window.location.assign(url);
 			}
 			else if(urlval2>0)
 			{
-				window.location.assign("http://ceva.invoize.org/prototype/index.html");
+				window.location.assign(url);
 			}
 			else
 			{
-				window.location.assign("http://abc.invoize.org/prototype/index.html");
+				window.location.assign("http://www.invoize.org");
 			}
 		}	
 		function signup()
@@ -58,7 +58,15 @@
 		}
 		function wizard_page()
 		{
-			window.location.assign("http://searce.invoize.org/prototype/wizard/wizard.html");
+			var urlval=document.URL.search("prototype");
+			if(urlval>1)
+			{
+			window.location.assign("http://abc.invoize.org/prototype/wizard/wizard.html");
+			}
+			else
+			{
+			window.location.assign("http://invoize.org/wizard/wizard.html");
+			}
 		}
 		
 	

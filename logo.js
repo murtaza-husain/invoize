@@ -21,17 +21,17 @@
 		}
 		function goto()
 		{
-			var url=document.URL;
-			var urlval=document.URL.search("searce.invoize.org");
-			var urlval2=document.URL.search("ceva.invoize.org");
+			
+			var urlval=document.URL.search("www.searce.invoize.org");
+			var urlval2=document.URL.search("www.ceva.invoize.org");
 			
 			if(urlval>0)
 			{
-				window.location.assign(url);
+				window.location.assign("www.searce.invoize.org");
 			}
 			else if(urlval2>0)
 			{
-				window.location.assign(url);
+				window.location.assign("www.ceva.invoize.org");
 			}
 			else
 			{

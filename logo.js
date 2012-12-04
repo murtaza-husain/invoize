@@ -28,30 +28,30 @@
 			{
 				if(urlval>0)
 				{
-					window.location="searce.invoize.org/prototype/index.html";
+					window.location="index.html";
 				}
 				else if(urlval2>0)
 				{
-					window.location.assign="ceva.invoize.org/prototype/index.html";
+					window.location="index.html";
 				}
 				else
 				{
-					window.location.assign="abc.invoize.org/prototype/index.html";
+					window.location="index.html";
 				}
 			}
 			else
 			{
 				if(urlval>0)
 				{
-					window.location="http://searce.invoize.org";
+					window.location="http://www.searce.invoize.org";
 				}
 				else if(urlval2>0)
 				{
-					window.location.assign="http://ceva.invoize.org";
+					window.location="http://www.ceva.invoize.org";
 				}
 				else
 				{
-					window.location.assign="http://invoize.org";
+					window.location="http://www.invoize.org";
 				}
 			}		
 		}	
